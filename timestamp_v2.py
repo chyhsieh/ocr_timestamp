@@ -54,7 +54,7 @@ with open(output_file, 'w') as csvFile:
             time = ocr.image_to_string(frame)
             print(time)
             if(time != pre_time):
-                cap.set(cv2.CAP_PROP_POS_FRAMES, jump_frame+1)
+                cap.set(cv2.CAP_PROP_POS_FRAMES, jump_frame)
                 state = 'continuous'
                 print('back to jump point')
             else:
